@@ -2,8 +2,3 @@
   <h1>HA Welcome </h1>
 </div>
 
-<% if @user %>
-  logging as <%= @user.email %>
-  <%= button_to "Log Out", logout_path, method: :delete, class: "btn btn-danger" %>
-
-<% end %>
