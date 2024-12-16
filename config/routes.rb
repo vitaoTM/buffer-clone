@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   resources :twitter_accounts # =
   # get "twitter_accounts/:id"
   # delete "twitter_accounts/:id"
+  resources :tweets
+  # this will map to a tweets controller
 
   root to: 'main#index'
 end
