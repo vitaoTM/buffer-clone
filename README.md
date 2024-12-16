@@ -12,6 +12,7 @@ I am following a web dev at [gorails](https://gorails.com/start) tutorial
 * Configuration
 - run: `bundle install`
 - run: `bundle exec rails s`
+- rum: `yarn`
 
 * Database
 - `postgresql`
