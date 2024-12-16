@@ -4,12 +4,13 @@
   <%= link_to "Connect to Twitter", "/auth/twitter", method: :post, class: "btn btn-primary" %>
 </div>
 
-<%= @twitter_accounts.each do |acc| %>
+<%= @twitter_accounts.each do |twitter_account| %>
   <div class="d-flex align-items-center mb-4">
     <div class="me-4">
-      <%# acc.image %>
-      <%= image_tag acc.image, class: "rounded-circle" %>
-      <%= link_to "@#{acc.username}", "https://x.com/#{acc.username}", targer: :_blank %>
+      <%= image_tag twitter_account.image, class: "rounded-circle" %>
+      <%= link_to "@#{twitter_account.username}", "https://x.com/#{twitter_account.username}", targer: :_blank %>
     </div>
+
+    <%= button_to "Disconnect", twitter_account, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger"  %>
   </div>
 <% end %>
