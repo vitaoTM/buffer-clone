@@ -4,7 +4,7 @@ class CreateTweets < ActiveRecord::Migration[6.1]
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :twitter_account, null: false, foreign_key: true
       t.text :body
-      t.datetime :published_at
+      t.datetime :publish_at
       t.string :tweet_id
 
       t.timestamps

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2024_12_16_180415) do
     t.bigint "user_id", null: false
     t.bigint "twitter_account_id", null: false
     t.text "body"
-    t.datetime "published_at"
+    t.datetime "publish_at"
     t.string "tweet_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
