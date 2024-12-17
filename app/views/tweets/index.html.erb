@@ -7,8 +7,9 @@
 </div>
 
 <div>
-  <% if Current.user.twitter_accounts.nome? %>
+  <% if Current.user.twitter_accounts.none? %>
     <%= button_to "Connect to Twitter", "/auth/twitter", method: :post, class: "btn btn-primary" %>
   <% end %>
-
 </div>
+
+<%= render @tweets %>
