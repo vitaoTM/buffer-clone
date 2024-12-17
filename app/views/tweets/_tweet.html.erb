@@ -1,0 +1,14 @@
+<div class="row"></div>
+  <div class="col-sm-9 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-header">
+        <%= image_tag tweet.twitter_account.image, class: "rounded-circle" %>
+        <%= link_to "@#{tweet.twitter_account.username}", "https://x.com/#{tweet.twitter_account.username}", target: :_blank %>
+      </div>
+      <div class="card-body text-center">
+        <%= tweet.body %>
+      </div>
+    </div>
+  </div>
+</div>
+
