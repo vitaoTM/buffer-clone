@@ -3,9 +3,9 @@ class Tweet < ApplicationRecord
   belongs_to :twitter_account
 
   validates :body, length: { minimum: 1, maximum: 280 }
-  validades :publish_at, presence: true
+  validates :publish_at, presence: true
 
   after_initialize do
-    sefl.publish_at ||= 1.hour.from_now
+    self.publish_at ||= 1.hour.from_now
   end
 end
