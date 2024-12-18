@@ -1,4 +1,4 @@
-<div class="row"></div>
+<div class="row">
   <div class="col-sm-9 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-header">
@@ -13,6 +13,7 @@
       <%= link_to "View Tweet", "https://x.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}", target: :_blank %>
     <% else %>
       Scheduled for <%= l tweet.publish_at, format: :short %>
+      <%= link_to "Edit Tweet", edit_tweet_path(tweet) %>
     <% end %>
   </div>
 </div>
