@@ -9,6 +9,11 @@
         <%= tweet.body %>
       </div>
     </div>
+    <% if tweet.published? %>
+      <%= link_to "View Tweet", "https://x.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}", target: :_blank %>
+    <% else %>
+      Scheduled for <%= l tweet.publish_at, format: :short %>
+    <% end %>
   </div>
 </div>
 
